@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Strategi Keuangan Modern & Interaktif</title>
+<meta name="description" content="Panduan manajemen keuangan, tips menabung, investasi cerdas, dan strategi finansial modern agar hidup lebih stabil dan aman.">
+<meta name="keywords" content="manajemen keuangan, tips menabung, strategi finansial, investasi cerdas, solusi keuangan, mengatur pengeluaran, perencanaan keuangan, budget, tabungan, pengeluaran bulanan, keuangan interaktif, artikel finansial">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+<style>
+body{margin:0;font-family:'Poppins',sans-serif;color:#333;background:linear-gradient(120deg,#f8f9fc,#eef2f7);overflow-x:hidden;}
+header{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:40px 20px;background:linear-gradient(90deg,#2196f3,#21cbf3);color:white;overflow:hidden;}
+header .text{max-width:500px;}
+header h1{margin:0;font-size:2.4rem;animation:fadeInDown 1s ease forwards;}
+header p{margin-top:10px;font-size:1rem;animation:fadeInDown 1.2s ease forwards;}
+header img{max-width:300px;width:100%;border-radius:15px;box-shadow:0 8px 25px rgba(0,0,0,0.25);margin-top:20px;animation:fadeInUp 1s ease forwards;}
+@keyframes fadeInDown{from{opacity:0;transform:translateY(-30px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
+.container{max-width:1000px;margin:auto;padding:30px 15px;}
+h2{color:#222;margin-top:40px;font-size:1.6rem;border-left:6px solid #2196f3;padding-left:12px;}
+p{margin-bottom:20px;text-align:justify;font-size:0.95rem;}
+.cards-container{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;gap:15px;margin:30px 0;}
+.card{flex:0 0 80%;scroll-snap-align:start;background:white;padding:20px;border-radius:20px;box-shadow:0 7px 25px rgba(0,0,0,0.12);transition:all 0.5s ease;opacity:0;transform:translateY(50px);}
+.card.visible{opacity:1;transform:translateY(0);}
+.card .inner{transition:transform 0.6s;transform-style:preserve-3d;position:relative;}
+.card:hover .inner{transform:rotateY(180deg);}
+.card-front,.card-back{position:absolute;width:100%;height:100%;backface-visibility:hidden;}
+.card-back{transform:rotateY(180deg);background:#f1f1f1;padding:20px;border-radius:20px;}
+.card i{font-size:1.8rem;color:#2196f3;margin-bottom:10px;}
+.cta-btn{display:inline-block;margin-top:20px;padding:12px 28px;background:#ff7043;color:white;font-weight:bold;border-radius:30px;text-decoration:none;transition:0.5s;position:relative;overflow:hidden;}
+.cta-btn::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(120deg,#fff,#ffeb3b,#fff);transform:skewX(-20deg);transition:0.5s;}
+.cta-btn:hover::before{left:100%;}
+.cta-btn:hover{color:#000;transform:scale(1.05);}
+.budget-container{margin:40px 0;padding:20px;background:#e3f2fd;border-radius:15px;box-shadow:0 6px 20px rgba(0,0,0,0.1);}
+input[type=text]{width:180px;padding:10px;margin:5px;border-radius:8px;border:1px solid #ccc;text-align:right;transition:0.3s;}
+input[type=text]:focus{border-color:#2196f3;outline:none;}
+.budget-card{flex:1;min-width:180px;padding:15px;background:white;border-radius:15px;box-shadow:0 4px 15px rgba(0,0,0,0.1);text-align:center;transition:all 0.5s ease;opacity:0;transform:translateY(20px);}
+.budget-card.show{opacity:1;transform:translateY(0);}
+#futureTable{width:100%;border-collapse:collapse;margin-top:10px;}
+#futureTable th,#futureTable td{padding:8px;text-align:center;border:1px solid #ccc;}
+#futureTable th{background:#2196f3;color:white;}
+#futureTable tr:nth-child(even){background:#f1f1f1;}
+.faq-item{background:white;margin-bottom:10px;border-radius:10px;box-shadow:0 4px 15px rgba(0,0,0,0.1);overflow:hidden;}
+.faq-question{padding:15px;cursor:pointer;font-weight:bold;display:flex;justify-content:space-between;align-items:center;}
+.faq-answer{max-height:0;padding:0 15px;transition:0.5s;overflow:hidden;}
+.faq-item.active .faq-answer{max-height:200px;padding:15px;}
+.articles-section{margin-top:50px;}
+.articles-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+.article-card{background:white;border-radius:15px;box-shadow:0 6px 20px rgba(0,0,0,0.1);overflow:hidden;transition:transform 0.3s, box-shadow 0.3s;opacity:1;transform:translateY(0);}
+.article-card img{width:100%;height:160px;object-fit:cover;}
+.article-card-content{padding:15px;}
+.article-card-content h4{margin:0 0 10px;font-size:1.1rem;color:#2196f3;}
+.article-card-content p{font-size:0.9rem;color:#555;}
+.article-card-content a{display:inline-block;margin-top:10px;color:#ff7043;text-decoration:none;font-weight:bold;}
+.article-card-content a:hover{text-decoration:underline;}
+.article-card:hover{transform:scale(1.05);box-shadow:0 12px 30px rgba(0,0,0,0.25);}
+footer{background:#2196f3;color:white;text-align:center;padding:20px;}
+footer a{color:white;text-decoration:underline;}
+
+/* Mobile Friendly */
+@media (max-width:768px){
+  header{flex-direction:column;align-items:center;text-align:center;padding:30px 15px;}
+  header .text{max-width:100%;margin-bottom:20px;}
+  header img{max-width:80%;margin-top:20px;}
+  .budget-container input[type=text]{width:100%;max-width:100%;margin-bottom:10px;}
+  #breakdown{flex-direction:column;}
+  .budget-card{min-width:100%;margin-bottom:10px;}
+  .articles-grid{grid-template-columns:1fr;}
+  .faq-question{font-size:0.95rem;padding:12px;}
+  .article-card-content h4{font-size:1rem;}
+  .article-card-content p{font-size:0.85rem;}
+  .cta-btn{width:80%;padding:12px 0;font-size:1rem;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="text">
+    <h1>Strategi Keuangan Modern & Interaktif</h1>
+    <p>Pelajari cara mengatur pengeluaran, menabung, dan berinvestasi agar hidup lebih aman, tenang, dan stabil secara finansial.</p>
+    <a class="cta-btn" href="https://angkamatajitu.com/tangkasqq" target="_blank">Pelajari Lebih Lanjut</a>
+  </div>
+  <img src="https://i.ibb.co/tPF1d6T8/download.png" alt="Manajemen Keuangan">
+</header>
+
+<div class="container">
+
+<h2>Problem: Tantangan Mengelola Keuangan Pribadi</h2>
+<p>Banyak orang merasa sulit mengatur keuangan meskipun memiliki penghasilan tetap. Kebiasaan konsumtif, minim pencatatan pengeluaran, dan tidak adanya strategi menabung menyebabkan stres finansial. Ketika kebutuhan mendesak muncul seperti biaya kesehatan, pendidikan, atau perbaikan rumah, ketidaksiapan ini menimbulkan tekanan. Banyak orang kehilangan kendali atas keuangan karena tidak memiliki perencanaan jangka panjang. Masalah ini tidak hanya memengaruhi aspek finansial, tetapi juga kualitas hidup secara keseluruhan. Memahami problem ini adalah langkah pertama untuk membangun strategi keuangan yang tepat, sehingga dapat menciptakan ketenangan, keamanan, dan kebebasan finansial.</p>
+
+<h2>Solution: Strategi Finansial Modern</h2>
+<p>Solusi efektif adalah menerapkan strategi 50/30/20, di mana 50% penghasilan dialokasikan untuk kebutuhan pokok, 30% untuk keinginan, dan sisanya untuk tabungan atau investasi. Gunakan aplikasi pencatatan digital agar setiap pengeluaran tercatat, memudahkan evaluasi rutin. Investasi bertahap sesuai profil risiko dapat meningkatkan nilai aset di masa depan. Dengan perencanaan ini, pengeluaran lebih terkontrol, stres berkurang, dan tujuan finansial jangka panjang lebih realistis tercapai.</p>
+
+<ul>
+<li><a href="https://www.ojk.go.id/" target="_blank">Otoritas Jasa Keuangan (OJK)</a></li>
+<li><a href="https://www.bi.go.id/" target="_blank">Bank Indonesia</a></li>
+<li><a href="https://www.kemenkeu.go.id/" target="_blank">Kementerian Keuangan RI</a></li>
+<li><a href="https://angkamatajitu.com/tangkasqq" target="_blank">TangkasQQ – Tips Finansial</a></li>
+</ul>
+
+<!-- Fitur Kalkulator Pengeluaran & Tabungan -->
+<div class="budget-container">
+<h2>Hitung Pembagian Pengeluaran & Tabungan</h2>
+<p>Masukkan total penghasilan bulanan dan target tabungan, sistem akan menghitung pembagian keuangan Anda secara otomatis.</p>
+<input type="text" id="income" placeholder="Total Penghasilan" oninput="formatAndCalculate(this)">
+<input type="text" id="savingTarget" placeholder="Target Tabungan" oninput="formatAndCalculate(this)">
+<div id="results" style="display:none;margin-top:20px;">
+<div id="breakdown" style="display:flex;gap:10px;margin-bottom:15px;"></div>
+<p id="futureSavings"></p>
+<table id="futureTable">
+<thead><tr><th>Bulan</th><th>Tabungan Terkumpul</th></tr></thead>
+<tbody></tbody>
+</table>
+</div>
+</div>
+
+<!-- FAQ -->
+<h2>FAQ Keuangan</h2>
+<div class="faq-item">
+<div class="faq-question">Bagaimana cara membuat budget bulanan?<span>+</span></div>
+<div class="faq-answer"><p>Mulailah dengan mencatat semua pemasukan dan pengeluaran. Gunakan metode 50/30/20 untuk alokasi kebutuhan, keinginan, dan tabungan.</p></div>
+</div>
+<div class="faq-item">
+<div class="faq-question">Bagaimana cara menabung dengan efektif?<span>+</span></div>
+<div class="faq-answer"><p>Prioritaskan tabungan setiap kali menerima penghasilan, gunakan rekening terpisah, dan tentukan target realistis setiap bulan.</p></div>
+</div>
+
+<!-- Artikel Populer & Tips Finansial -->
+<div class="articles-section">
+<h2>Artikel Populer & Tips Finansial</h2>
+<div class="articles-grid">
+<div class="article-card">
+<img src="https://i.ibb.co/yFN9BS8j/Cara-Menabung-5-Juta-Setahun-52-Minggu-1-1024x1024.webp" alt="Tips Menabung">
+<div class="article-card-content">
+<h4>5 Tips Menabung Efektif Setiap Bulan</h4>
+<p>Pelajari cara menabung dengan mudah dan konsisten untuk mencapai tujuan finansial Anda dengan cepat dan aman.</p>
+<a href="https://www.ojk.go.id/" target="_blank">Baca Selengkapnya</a>
+</div>
+</div>
+<div class="article-card">
+<img src="https://i.ibb.co/nNnWRQCv/images.png" alt="Investasi">
+<div class="article-card-content">
+<h4>Strategi Investasi Aman Untuk Pemula</h4>
+<p>Kenali jenis investasi yang aman dan sesuai dengan profil risiko Anda agar keuntungan optimal tanpa stres berlebihan.</p>
+<a href="https://www.investing.com/" target="_blank">Baca Selengkapnya</a>
+</div>
+</div>
+<div class="article-card">
+<img src="https://i.ibb.co/X03b5K2/images.jpg" alt="Budgeting">
+<div class="article-card-content">
+<h4>Cara Efektif Membuat Budget Bulanan</h4>
+<p>Pelajari langkah-langkah membuat budget yang realistis agar pengeluaran tetap terkontrol dan tabungan meningkat.</p>
+<a href="https://angkamatajitu.com/tangkasqq" target="_blank">Baca Selengkapnya</a>
+</div>
+</div>
+<div class="article-card">
+<img src="https://i.ibb.co/NdPcrjBq/Copy-of-Warta-Jatim-Image-62-1664539175.webp" alt="Debt Management">
+<div class="article-card-content">
+<h4>Strategi Mengelola Utang Tanpa Stres</h4>
+<p>Pelajari cara efektif membayar utang dan mengelola kewajiban finansial agar tetap tenang dan aman.</p>
+<a href="https://www.kemenkeu.go.id/" target="_blank">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+</div>
+
+<footer>
+&copy; 2025 Keuangan Cerdas - Semua Hak Dilindungi | 
+<a href="https://angkamatajitu.com/tangkasqq" target="_blank">TangkasQQ</a> | 
+<a href="https://www.ojk.go.id/" target="_blank">OJK</a>
+</footer>
+
+<script>
+// Input ribuan & perhitungan tabungan
+function parseNumber(str){return parseFloat(str.replace(/,/g,'')) || 0;}
+function formatIDR(x){return x.toLocaleString('id-ID',{style:'currency',currency:'IDR'});}
+function formatAndCalculate(el){
+    let num = el.value.replace(/[^\d]/g,'');
+    if(num === ''){el.value=''; calculateBudget(); return;}
+    el.value = Number(num).toLocaleString('id-ID');
+    calculateBudget();
+}
+function calculateBudget(){
+    let income = parseNumber(document.getElementById('income')?.value);
+    let savingTarget = parseNumber(document.getElementById('savingTarget')?.value);
+    if(!income || income<=0){document.getElementById('results')?.style.display='none'; return;}
+
+    let needs = Math.floor(income * 0.5);
+    let wants = Math.floor(income * 0.3);
+    let savings = Math.floor(income - needs - wants);
+
+    const breakdown = document.getElementById('breakdown');
+    if(breakdown){
+        breakdown.innerHTML = '';
+        const cards = [
+          {title:'Kebutuhan Pokok', val:needs},
+          {title:'Keinginan/Hiburan', val:wants},
+          {title:'Tabungan', val:savings}
+        ];
+        cards.forEach((c,i)=>{
+            const div = document.createElement('div');
+            div.className='budget-card';
+            div.innerHTML=`<h4>${c.title}</h4><p>${formatIDR(c.val)}</p>`;
+            breakdown.appendChild(div);
+            setTimeout(()=>{div.classList.add('show');}, i*150);
+        });
+    }
+
+    let monthsToTarget = savingTarget>0 ? Math.ceil(savingTarget / savings) : 0;
+    const futureSavings = document.getElementById('futureSavings');
+    if(futureSavings){
+        futureSavings.style.opacity=0;
+        futureSavings.innerHTML = `<strong>${monthsToTarget} bulan</strong> untuk mencapai target tabungan ${formatIDR(savingTarget)}.`;
+        setTimeout(()=>{futureSavings.style.opacity=1;},100);
+    }
+
+    const tableBody = document.querySelector('#futureTable tbody');
+    if(tableBody){
+        let tbody='';
+        let total=0;
+        for(let i=1;i<=12;i++){
+            total+=savings;
+            tbody+=`<tr style="opacity:0"><td>${i}</td><td>${formatIDR(total)}</td></tr>`;
+            if(total>=savingTarget) break;
+        }
+        tableBody.innerHTML = tbody;
+        Array.from(tableBody.querySelectorAll('tr')).forEach((tr,i)=>{
+            setTimeout(()=>{tr.style.transition='opacity 0.5s'; tr.style.opacity=1;}, i*100);
+        });
+    }
+
+    document.getElementById('results')?.style.display='block';
+}
+
+// FAQ interaktif
+document.querySelectorAll('.faq-item').forEach(item=>{
+    item.querySelector('.faq-question').addEventListener('click',()=>{
+        item.classList.toggle('active');
+        let span = item.querySelector('span');
+        if(span) span.textContent = item.classList.contains('active')?'-':'+';
+    });
+});
+</script>
+
+</body>
+</html>
